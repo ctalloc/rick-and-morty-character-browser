@@ -1,11 +1,14 @@
 import CharacterCard from "./CharacterCard";
 import "../stylesheets/App.scss";
+import { Link } from "react-router-dom";
 
 const CharacterList = (props) => {
   const characters = props.chars.map((char, i) => {
     return (
       <li key={i}>
-        <CharacterCard chardata={char}></CharacterCard>
+        <Link to={`./character/${char.id}`}>
+          <CharacterCard chardata={char}></CharacterCard>
+        </Link>  
       </li>
     );
   });
