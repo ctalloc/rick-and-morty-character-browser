@@ -8,7 +8,6 @@ console.log(getDataFromApi());
 const App = () => {
   const [chars, setChars] = useState([]);
   useEffect(()=>{
-    //console.log(getDataFromApi());
     getDataFromApi().then(data => setChars(data));
   },[]);
 
