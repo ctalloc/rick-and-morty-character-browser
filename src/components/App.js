@@ -1,11 +1,25 @@
+import React, { useEffect, useState } from 'react';
 import '../stylesheets/App.scss';
 import getDataFromApi from '../services/getDataFromApi'
+import CharacterList from './CharacterList'
 
 console.log(getDataFromApi());
-function App() {
-  return (
-    <p>Adiós mundo</p>
-  );
-}
 
+const App = () => {
+  const [chars, setChars] = useState([]);
+  useEffect(()=>{
+    //console.log(getDataFromApi());
+    getDataFromApi().then(data => setChars(data));
+  },[]);
+
+  return (
+    <>
+      <h1>Rick y Morty buscador</h1>
+      <div >
+        <CharacterList chars={chars}/>
+      </div>
+    </>
+  );
+};
 export default App;
+
