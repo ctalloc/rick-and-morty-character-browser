@@ -40,10 +40,10 @@ const App = () => {
 
   function compareByStatus(a, b) {
     if (a.status === "Alive" && b.status === "Dead") {
-      return -1;
+      return -2;
     }
-    if (a.status === "Deade" && b.status === "Alive") {
-      return 1;
+    if (a.status === "Dead" && b.status === "Alive") {
+      return 2;
     }
     return 0;
   }
@@ -56,7 +56,7 @@ const App = () => {
       return char.species.includes(species)
     })
     .sort(compareByName)
-    .sort(compareByStatus);
+    .sort(compareByStatus)
 
   const renderCharDetail = (routerProps) => {
     const routerCharId = routerProps.match.params.charId;
