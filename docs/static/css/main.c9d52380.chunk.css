@@ -1,0 +1,2 @@
+*{padding:0;margin:0}.charList{max-width:1200px;margin:0 auto;padding:20px 0;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;list-style-type:none;grid-gap:15px}.charCard{width:240px;height:240px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.charCard__title{text-transform:capitalize;font-size:20px;width:100%}.charCard__img{width:70%}
+/*# sourceMappingURL=main.c9d52380.chunk.css.map */
