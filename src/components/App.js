@@ -4,6 +4,7 @@ import "../stylesheets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail"
+import CharacterNotFound from "./CharacterNotFound"
 import Filters from "./Filters";
 
 console.log(getDataFromApi());
@@ -21,18 +22,44 @@ const App = () => {
       console.log(name);
     }
   };
+
+  function compare (a,b) {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1
+    }
+    return 0
+  }
+
   const filteredChars = chars.filter((char) => {
     return char.name.toUpperCase().includes(name.toUpperCase());
   });
 
+  // function compare (a,b) {
+  //   if (a.name < b.name) {
+  //     return -1;
+  //   }
+  //   if (a.name > b.name) {
+  //     return 1
+  //   }
+  //   return 0
+  // }
+
+  const sortedChars = filteredChars.sort(compare);
+
   const renderCharDetail = routerProps => {
-    console.log('Id del pj de la ruta:', routerProps.match.params.charId);
     const routerCharId = routerProps.match.params.charId;
-    const charFound = chars.find(char => char.id === routerCharId);
+    console.log('El Id del pj clickado es: ', routerCharId);
+    const charFound = chars.find(char => char.id === parseInt(routerCharId));
+    console.log('El resultado del match es:', charFound);
     if (charFound) {
       return <CharacterDetail char={charFound} />;
     } else {
-      return ;
+      return (
+        <CharacterNotFound/>
+      );
     }
   }
 
@@ -43,7 +70,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Filters handleFilter={handleFilter} />
-            <CharacterList chars={filteredChars} />
+            <CharacterList chars={sortedChars} />
           </Route>
           <Route path="/character/:charId" render={renderCharDetail} />
         </Switch>
