@@ -23,8 +23,8 @@ const App = () => {
     }
   };
 
-  function compare (a,b) {
-    if (a.name < b.name) {
+  function compareByName (a,b) {
+    if (a.status < b.name) {
       return -1;
     }
     if (a.name > b.name) {
@@ -33,21 +33,19 @@ const App = () => {
     return 0
   }
 
+    function compareByStatus (a,b) {
+    if (a.status === "Alive" && b.status === "Dead") {
+      return -1;
+    }
+    if (a.status === "Deade" && b.status === "Alive") {
+      return 1
+    }
+    return 0
+  }
+
   const filteredChars = chars.filter((char) => {
     return char.name.toUpperCase().includes(name.toUpperCase());
-  });
-
-  // function compare (a,b) {
-  //   if (a.name < b.name) {
-  //     return -1;
-  //   }
-  //   if (a.name > b.name) {
-  //     return 1
-  //   }
-  //   return 0
-  // }
-
-  const sortedChars = filteredChars.sort(compare);
+  }).sort(compareByName).sort(compareByStatus);
 
   const renderCharDetail = routerProps => {
     const routerCharId = routerProps.match.params.charId;
@@ -70,7 +68,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Filters handleFilter={handleFilter} />
-            <CharacterList chars={sortedChars} />
+            <CharacterList chars={filteredChars} />
           </Route>
           <Route path="/character/:charId" render={renderCharDetail} />
         </Switch>
