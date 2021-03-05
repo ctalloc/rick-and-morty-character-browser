@@ -7,13 +7,19 @@
     align-items: center;
     padding: 20px;
     &__logocontainer{
-        width: 40vw;
+        width: 50vw;
     }
     &__logo {
         width: inherit;
     }
     &__title {
         font-family: $fontMain;
-        font-size: 20px;
+        font-size: 16px;
+        @include tablet {
+            font-size: 18px;
+        }
+        @include desktop {
+            font-size: 24px;
+        }
     }
 }
