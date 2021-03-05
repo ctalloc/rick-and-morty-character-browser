@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import "../stylesheets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
+import Header from "./Header";
 import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import CharacterNotFound from "./CharacterNotFound";
@@ -71,9 +72,9 @@ const App = () => {
   };
 
   return (
-    <>
-      <h1>Rick y Morty buscador</h1>
-      <div>
+    <div className="body">
+      <Header/>
+      <main className='main'>
         <Switch>
           <Route path="/" exact>
             <Filters handleFilter={handleFilter} />
@@ -81,8 +82,8 @@ const App = () => {
           </Route>
           <Route path="/character/:charId" render={renderCharDetail} />
         </Switch>
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 export default App;

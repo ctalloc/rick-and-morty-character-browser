@@ -1,0 +1,19 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    &__logocontainer{
+        width: 40vw;
+    }
+    &__logo {
+        width: inherit;
+    }
+    &__title {
+        font-family: $fontMain;
+        font-size: 20px;
+    }
+}

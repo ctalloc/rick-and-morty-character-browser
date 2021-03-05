@@ -1,31 +1,18 @@
-* {
-  padding: 0;
-  margin: 0;
+@import 'core/reset';
+@import 'core/variables';
+@import 'core/mixins';
+
+.body {
+  background-color: $darkgrey;
 }
 
-.charList {
-  max-width: 1200px;
-  margin: 0 auto 0 auto;
-  padding: 20px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  list-style-type: none;
-  grid-gap: 15px;
-}
-
-.charCard {
-  width: 240px;
-  height: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  &__title{
-    text-transform: capitalize;
-    font-size: 20px;
-    width: 100%;
+.main {
+  margin: 0 15px;
+  @include tablet {
+    margin: 0 45px;
   }
-  &__img{
-    width: 70%;
+  @include desktop {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
   }
 }

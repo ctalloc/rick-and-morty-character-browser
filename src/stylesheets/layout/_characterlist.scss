@@ -1,0 +1,15 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.charList {
+  list-style-type: none;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  // padding: 20px 0;
+
+  
+}

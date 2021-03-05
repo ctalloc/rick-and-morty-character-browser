@@ -1,4 +1,4 @@
-import "../stylesheets/App.scss";
+import "../stylesheets/layout/_charactercard.scss";
 
 const CharacterCard = (props) => {
 
@@ -17,7 +17,8 @@ const CharacterCard = (props) => {
   return (
     <article className='charCard'>
       <img className='charCard__img' src={props.chardata.image} alt={props.chardata.name} />
-      <h2 className='charCard__title'>{props.chardata.name}{statusIcon()}</h2>
+      <h2 className='charCard__title'>{props.chardata.name}</h2>
+      <h4>{statusIcon()}{props.chardata.species}</h4>
     </article>
   );
 };
