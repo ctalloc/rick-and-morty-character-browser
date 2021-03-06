@@ -4,19 +4,38 @@
 .charCard {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   @include desktop {
     width: 240px;
     height: 240px;
   }
-
   &__title {
     text-transform: capitalize;
-    font-size: 20px;
-    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    font-family: $fontMain;
+    color: $yellow;
+        @include tablet {
+            font-size: 18px;
+        }
+        @include desktop {
+            font-size: 22px;
+        }
   }
   &__img {
     width: 70%;
+  }
+  &__subtitle{
+    font-size: 12px;
+    text-align: center;
+    font-family: $fontMain;
+    color: $orange;
+        @include tablet {
+            font-size: 12px;
+        }
+        @include desktop {
+            font-size: 16px;
+        }
   }
 }

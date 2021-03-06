@@ -1,0 +1,31 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.filters {
+    padding: 2px 0 20px 0;
+    @include tablet {
+        border-top: 1px solid black;
+        padding: 4px 0 20px 0;
+    }
+    &__form{
+        display: flex;
+        font-family: $fontMain;
+        font-size: 14px;
+        @include tablet {
+            font-size: 16px;
+        }
+        @include desktop {
+            font-size: 20px;
+        }
+        &--item{
+            margin: 0 2px 0 2px;
+            @include tablet {
+                margin: 0 20px 0 2px;
+            }
+            @include desktop {
+                margin: 0 40px 0 2px;
+            }
+        }
+    }
+    
+}

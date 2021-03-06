@@ -7,12 +7,12 @@ const FilterByName = props =>{
       });
     }
     return (
-        <>
+        <div className='filters__form--item'>
         <label htmlFor="name">
-          Filtrar personajes por nombre:
+          Nombre:
         </label>
-        <input type="text" name="name" id="name" onChange={handleChange}/>
-        </>
+        <input type="text" name="name" id="name" onChange={handleChange} placeholder="Ej.: Abradolf Linkler..."/>
+        </div>
     )
   }
   export default FilterByName;

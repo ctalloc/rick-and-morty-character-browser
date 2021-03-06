@@ -6,14 +6,14 @@ const FilterBySpecies = (props) => {
     });
   };
   return (
-    <>
-      <label htmlFor="species">Filtrar personajes por especie:</label>
+    <div className='filters__form--item'>
+      <label htmlFor="species">Especie:</label>
       <select name="species" onChange={handleChange}>
         <option value="">Todas</option>
         <option value="Human">Humano</option>
         <option value="Alien">Alien</option>
       </select>
-    </>
+    </div>
   );
 };
 export default FilterBySpecies;

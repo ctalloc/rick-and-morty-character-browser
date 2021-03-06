@@ -18,7 +18,7 @@ const CharacterCard = (props) => {
     <article className='charCard'>
       <img className='charCard__img' src={props.chardata.image} alt={props.chardata.name} />
       <h2 className='charCard__title'>{props.chardata.name}</h2>
-      <h4>{statusIcon()}{props.chardata.species}</h4>
+      <h4 className='charCard__subtitle'> {statusIcon()} {props.chardata.species}</h4>
     </article>
   );
 };
