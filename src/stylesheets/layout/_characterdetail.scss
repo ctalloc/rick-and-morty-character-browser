@@ -1,0 +1,41 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.charDetail{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        border: 4px solid $teal;
+        background-color: $lightgrey;
+        padding: 20px;
+        border-radius: 10%;
+    }
+    &__title{
+        font-family: $fontMain;
+        text-align: center;
+        font-size: 34px;
+        margin: 0 0 20px 0;
+    }
+    &__card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+    }
+    &__props{
+        list-style-type: none;
+        font-family: $fontText;
+        line-height: 2;
+    }
+    &__link{
+        font-family: $fontMain;
+        color: $orange;
+        font-size: 20px;
+        line-height: 2;
+        margin: 0 120px;
+    }
+    &__image{
+        margin: 0 auto 0 20px;
+    }
+}

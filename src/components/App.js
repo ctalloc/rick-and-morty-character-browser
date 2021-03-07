@@ -30,25 +30,25 @@ const App = () => {
     }
   };
 
-  function compareByName(a, b) {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  }
+  // function compareByName(a, b) {
+  //   if (a.name < b.name) {
+  //     return -1;
+  //   }
+  //   if (a.name > b.name) {
+  //     return 1;
+  //   }
+  //   return 0;
+  // }
 
-  function compareByStatus(a, b) {
-    if (a.status < b.status) {
-      return -1;
-    }
-    if (a.status > b.status) {
-      return 1;
-    }
-    return 0;
-  }
+  // function compareByStatus(a, b) {
+  //   if (a.status < b.status) {
+  //     return -1;
+  //   }
+  //   if (a.status > b.status) {
+  //     return 1;
+  //   }
+  //   return 0;
+  // }
 
   const filteredChars = chars
     .filter((char) => {
@@ -58,8 +58,8 @@ const App = () => {
       return char.species.includes(species)
     })
     .sort(
-      firstBy(compareByStatus)
-      .thenBy(compareByName)
+      firstBy('status')
+      .thenBy('name')
     )
     
 
