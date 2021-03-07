@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
+import {firstBy} from "thenby";
 import "../stylesheets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
 import Header from "./Header";
@@ -30,7 +31,7 @@ const App = () => {
   };
 
   function compareByName(a, b) {
-    if (a.status < b.name) {
+    if (a.name < b.name) {
       return -1;
     }
     if (a.name > b.name) {
@@ -40,11 +41,11 @@ const App = () => {
   }
 
   function compareByStatus(a, b) {
-    if (a.status === "Alive" && b.status === "Dead") {
-      return -2;
+    if (a.status < b.status) {
+      return -1;
     }
-    if (a.status === "Dead" && b.status === "Alive") {
-      return 2;
+    if (a.status > b.status) {
+      return 1;
     }
     return 0;
   }
@@ -56,8 +57,11 @@ const App = () => {
     .filter((char) => {
       return char.species.includes(species)
     })
-    .sort(compareByName)
-    .sort(compareByStatus)
+    .sort(
+      firstBy(compareByStatus)
+      .thenBy(compareByName)
+    )
+    
 
   const renderCharDetail = (routerProps) => {
     const routerCharId = routerProps.match.params.charId;
