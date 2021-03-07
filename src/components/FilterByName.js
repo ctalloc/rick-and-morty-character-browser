@@ -8,7 +8,7 @@ const FilterByName = props =>{
     }
     return (
         <div className='filters__form--item'>
-        <label htmlFor="name">
+        <label className='filters__form--itemlabel' htmlFor="name">
           Nombre:
         </label>
         <input type="text" name="name" id="name" onChange={handleChange} placeholder="Ej.: Abradolf Linkler..."/>
