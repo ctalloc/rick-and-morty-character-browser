@@ -4,13 +4,13 @@ const CharacterCard = (props) => {
 
   const statusIcon = () => {
     if (props.chardata.status === "Dead") {
-      return <i class="fas fa-skull-crossbones"></i>
+      return <i className="fas fa-skull-crossbones"></i>
     }
     if (props.chardata.status === "Alive") {
       return ""
     }
     if (props.chardata.status === "unknown") {
-      return <i class="fas fa-question"></i>
+      return <i className="fas fa-question"></i>
     }
   }
 

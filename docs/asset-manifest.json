@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.184c9e05.chunk.css",
-    "main.js": "/static/js/main.67564b15.chunk.js",
-    "main.js.map": "/static/js/main.67564b15.chunk.js.map",
+    "main.css": "/static/css/main.2343d718.chunk.css",
+    "main.js": "/static/js/main.df8505a9.chunk.js",
+    "main.js.map": "/static/js/main.df8505a9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5df15b97.js",
     "runtime-main.js.map": "/static/js/runtime-main.5df15b97.js.map",
     "static/js/2.a3b2f10b.chunk.js": "/static/js/2.a3b2f10b.chunk.js",
     "static/js/2.a3b2f10b.chunk.js.map": "/static/js/2.a3b2f10b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.184c9e05.chunk.css.map": "/static/css/main.184c9e05.chunk.css.map",
+    "static/css/main.2343d718.chunk.css.map": "/static/css/main.2343d718.chunk.css.map",
     "static/js/2.a3b2f10b.chunk.js.LICENSE.txt": "/static/js/2.a3b2f10b.chunk.js.LICENSE.txt",
     "static/media/RandM_logo.de13d484.png": "/static/media/RandM_logo.de13d484.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5df15b97.js",
     "static/js/2.a3b2f10b.chunk.js",
-    "static/css/main.184c9e05.chunk.css",
-    "static/js/main.67564b15.chunk.js"
+    "static/css/main.2343d718.chunk.css",
+    "static/js/main.df8505a9.chunk.js"
   ]
 }
