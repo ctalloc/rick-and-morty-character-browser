@@ -24,7 +24,7 @@ const CharacterDetail = (props) => {
           </ul>
         </section>
         <Link to="/">
-          <span className="charDetail__link">Volver</span>
+          <span className="charDetail__link">Back</span>
         </Link>
       </article>
     </div>

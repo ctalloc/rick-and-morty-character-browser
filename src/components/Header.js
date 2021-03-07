@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header__logocontainer">
         <img className="header__logo" src={logo} alt="logo"></img>
       </div>
-      <h1 className="header__title">Buscador de personajes de la serie</h1>
+      <h1 className="header__title">Character info and sorting</h1>
     </header>
   );
 };

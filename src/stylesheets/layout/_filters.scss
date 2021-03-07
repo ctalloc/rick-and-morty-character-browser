@@ -26,8 +26,12 @@
                 margin: 0 40px 0 2px;
             }
         }
-        &--itemlabel{
+        &--label{
             margin: 0 20px 0 0;
+        }
+        &--input{
+            padding: 2px;
+            font-family: $fontText;
         }
     }
     

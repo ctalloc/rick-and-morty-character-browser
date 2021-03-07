@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import {firstBy} from "thenby";
+import { firstBy } from "thenby";
 import "../stylesheets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
 import Header from "./Header";
@@ -25,43 +25,19 @@ const App = () => {
       console.log(name);
     }
     if (inputChange.key === "species") {
-      setSpecies(inputChange.value)
+      setSpecies(inputChange.value);
       console.log(species);
     }
   };
-
-  // function compareByName(a, b) {
-  //   if (a.name < b.name) {
-  //     return -1;
-  //   }
-  //   if (a.name > b.name) {
-  //     return 1;
-  //   }
-  //   return 0;
-  // }
-
-  // function compareByStatus(a, b) {
-  //   if (a.status < b.status) {
-  //     return -1;
-  //   }
-  //   if (a.status > b.status) {
-  //     return 1;
-  //   }
-  //   return 0;
-  // }
 
   const filteredChars = chars
     .filter((char) => {
       return char.name.toUpperCase().includes(name.toUpperCase());
     })
     .filter((char) => {
-      return char.species.includes(species)
+      return char.species.includes(species);
     })
-    .sort(
-      firstBy('status')
-      .thenBy('name')
-    )
-    
+    .sort(firstBy("status").thenBy("name"));
 
   const renderCharDetail = (routerProps) => {
     const routerCharId = routerProps.match.params.charId;
@@ -77,8 +53,8 @@ const App = () => {
 
   return (
     <div className="body">
-      <Header/>
-      <main className='main'>
+      <Header />
+      <main className="main">
         <Switch>
           <Route path="/" exact>
             <Filters handleFilter={handleFilter} />
