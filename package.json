@@ -14,7 +14,7 @@
     "thenby": "^1.3.4",
     "web-vitals": "^1.1.0"
   },
-  "homepage": "http://beta.adalab.es/modulo-3-evaluacion-final-ctalloc/",
+  "homepage": "https://ctalloc.github.io/rick-and-morty-character-browser/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

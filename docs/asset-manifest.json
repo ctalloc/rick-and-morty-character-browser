@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/modulo-3-evaluacion-final-ctalloc/static/css/main.2343d718.chunk.css",
-    "main.js": "/modulo-3-evaluacion-final-ctalloc/static/js/main.4bca8d33.chunk.js",
-    "main.js.map": "/modulo-3-evaluacion-final-ctalloc/static/js/main.4bca8d33.chunk.js.map",
-    "runtime-main.js": "/modulo-3-evaluacion-final-ctalloc/static/js/runtime-main.b1ab864c.js",
-    "runtime-main.js.map": "/modulo-3-evaluacion-final-ctalloc/static/js/runtime-main.b1ab864c.js.map",
-    "static/js/2.a3b2f10b.chunk.js": "/modulo-3-evaluacion-final-ctalloc/static/js/2.a3b2f10b.chunk.js",
-    "static/js/2.a3b2f10b.chunk.js.map": "/modulo-3-evaluacion-final-ctalloc/static/js/2.a3b2f10b.chunk.js.map",
-    "index.html": "/modulo-3-evaluacion-final-ctalloc/index.html",
-    "static/css/main.2343d718.chunk.css.map": "/modulo-3-evaluacion-final-ctalloc/static/css/main.2343d718.chunk.css.map",
-    "static/js/2.a3b2f10b.chunk.js.LICENSE.txt": "/modulo-3-evaluacion-final-ctalloc/static/js/2.a3b2f10b.chunk.js.LICENSE.txt",
-    "static/media/RandM_logo.de13d484.png": "/modulo-3-evaluacion-final-ctalloc/static/media/RandM_logo.de13d484.png"
+    "main.css": "/rick-and-morty-character-browser/static/css/main.2343d718.chunk.css",
+    "main.js": "/rick-and-morty-character-browser/static/js/main.4bca8d33.chunk.js",
+    "main.js.map": "/rick-and-morty-character-browser/static/js/main.4bca8d33.chunk.js.map",
+    "runtime-main.js": "/rick-and-morty-character-browser/static/js/runtime-main.e8836327.js",
+    "runtime-main.js.map": "/rick-and-morty-character-browser/static/js/runtime-main.e8836327.js.map",
+    "static/js/2.a3b2f10b.chunk.js": "/rick-and-morty-character-browser/static/js/2.a3b2f10b.chunk.js",
+    "static/js/2.a3b2f10b.chunk.js.map": "/rick-and-morty-character-browser/static/js/2.a3b2f10b.chunk.js.map",
+    "index.html": "/rick-and-morty-character-browser/index.html",
+    "static/css/main.2343d718.chunk.css.map": "/rick-and-morty-character-browser/static/css/main.2343d718.chunk.css.map",
+    "static/js/2.a3b2f10b.chunk.js.LICENSE.txt": "/rick-and-morty-character-browser/static/js/2.a3b2f10b.chunk.js.LICENSE.txt",
+    "static/media/RandM_logo.de13d484.png": "/rick-and-morty-character-browser/static/media/RandM_logo.de13d484.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b1ab864c.js",
+    "static/js/runtime-main.e8836327.js",
     "static/js/2.a3b2f10b.chunk.js",
     "static/css/main.2343d718.chunk.css",
     "static/js/main.4bca8d33.chunk.js"
